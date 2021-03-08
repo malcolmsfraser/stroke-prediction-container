@@ -10,10 +10,10 @@ docker run -p 8080:8080
 Prediction takes a json payload, and returns a risk-level and score.
 
 The payload looks like
->{
-    "age": {
-        "0": 64
-        },
+>{  
+    "age": {  
+        "0": 64  
+        },  
     "hypertension": {
         "0": 0
         },
