@@ -11,8 +11,7 @@ Prediction takes a json payload, and returns a risk-level and score.
 
 The payload looks like
 >{  
-    "age":  
-    \t{"0": 64},  
+    "age": {"0": 64},  
     "hypertension": {"0": 0},  
     "heart_disease": {"0": 0},  
     "avg_glucose_level": {"0": 62.21},  
