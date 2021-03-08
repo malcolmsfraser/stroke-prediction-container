@@ -33,3 +33,6 @@ The payload looks like
     "smoking_status_never smoked": {"0": 0},  
     "smoking_status_smokes": {"0": 0}  
     }
+    
+The output looks like
+>"You have been identified as having very high risk of stroke: Score 0.9547"
