@@ -9,17 +9,9 @@ app = Flask(__name__)
 LOG = create_logger(app)
 LOG.setLevel(logging.INFO)
 
-def scale(payload):
-    """Scales Payload"""
-
-    LOG.info(f"Scaling Payload: {payload}")
-    scaler = StandardScaler().fit(payload)
-    scaled_adhoc_predict = scaler.transform(payload)
-    return scaled_adhoc_predict
-
 @app.route("/")
 def home():
-    html = f"<h3>Sklearn Prediction Home</h3>"
+    html = f"<h3>Stroke Prediction Home</h3>"
     return html.format(format)
 
 # TO DO:  Log out the prediction value
@@ -104,8 +96,34 @@ def predict():
     LOG.info(f"JSON payload: {json_payload}")
     inference_payload = pd.DataFrame(json_payload)
     LOG.info(f"inference payload DataFrame: {inference_payload}")
-    prediction = list(clf.predict(inference_payload))
-    return jsonify({'prediction': prediction})
+    prediction = clf.predict_proba(inference_payload)[0][0]
+    
+    very_high_risk = 0.9
+    high_risk = 0.8
+    moderately_high_risk = .7
+    moderate_risk = .6
+    low_risk = .5
+    very_low_risk = .3
+    
+    if prediction >= very_high_risk:
+        statement = f'You have been identified as having very high risk of stroke: Score {prediction: .4f}.'
+        pass
+    elif prediction >= high_risk:
+        statement = f'You have been identified as having high risk of stroke: Score {prediction: .4f}.'
+        pass
+    elif prediction >= moderately_high_risk:
+        statement = f'You have been identified as having moderately high risk of stroke: Score {prediction: .4f}.'
+        pass
+    elif prediction >= moderate_risk:
+        statement = f'You have been identified as having moderate risk of stroke: Score {prediction: .4f}.'
+        pass
+    elif prediction >= low_risk:
+        statement = f'You have been identified as having low risk of stroke: Score {prediction: .4f}.'
+        pass
+    elif prediction >= very_low_risk:
+        statement = f'You have been identified as having very low risk of stroke: Score {prediction: .4f}.'
+    
+    return statement
 
 if __name__ == "__main__":
     clf = joblib.load("stroke_prediction.joblib")
