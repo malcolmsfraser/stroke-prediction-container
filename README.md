@@ -1,5 +1,7 @@
 # stroke-prediction-container
 
+[![alt text](https://github.com/malcolmsfraser/stroke-prediction-container/blob/master/thumbnail.jpg)](https://youtu.be/zslng8DUUkw)  
+
 Source code for a Docker container that has a flask based web-app inside stroke prediction.
 
 ```
