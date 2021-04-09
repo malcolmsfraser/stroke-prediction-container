@@ -5,5 +5,4 @@ flask
 xgboost
 joblib
 imblearn
-requests 
-json
+requests
