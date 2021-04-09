@@ -57,11 +57,11 @@ def predict(payload):
     
     load = pd.DataFrame(data=payload)
     clf =  load_model()
-    prediction = clf.predict(load)
+    prediction = clf.predict_proba(load)[0][0]
     predict_log_data = {
         "payload" : payload,
         "prediction" : prediction,
     }
-    logging.debug(f"Prediction {prediction}")
+    logging.debug(f"Prediction: {prediction}")
     return prediction
     

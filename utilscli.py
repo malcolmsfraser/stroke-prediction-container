@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import click
 import mlib
+import json
 import requests
 from predict import create_payload
 
@@ -26,15 +27,38 @@ def retrain(tsize):
 
 
 @cli.command("predict")
-@click.option("--host", default="http://localhost:8080/predict", help="Host to query")
+@click.option("--host", default="http://localhost:8080/", help="Host to query")
 def mkrequest(host):
     """Sends prediction to ML Endpoint"""
     
     payload = create_payload()
-    click.echo(click.style(f"Querying host {host} with payload: \n{payload}",
+    click.echo(click.style(f"Querying host {host+'/predict'} with payload: \n{payload}",
         bg="green", fg="white"))
     result = requests.post(url=host, json=payload)
     click.echo(click.style(f"result: {result.text}", bg="red", fg="white"))
+
+@cli.command("payload-predict")
+@click.option("--payload", default="payload.json", help="json payload")
+@click.option("--host", default="http://localhost:8080/", help="Host to query")
+def mk_payloadrequest(payload, host):
+    """Sends prediction to ML Endpoint"""
+    
+    inputs = ['age','hypertension','heart_disease','avg_glucose_level', 'bmi',
+    'gender_Female', 'gender_Male', 'gender_Other',
+    'ever_married_No','ever_married_Yes',
+    'work_type_Govt_job','work_type_Never_worked','work_type_Private','work_type_Self-employed','work_type_children',
+    'Residence_type_Rural','Residence_type_Urban',
+    'smoking_status_Unknown','smoking_status_formerly smoked','smoking_status_never smoked','smoking_status_smokes']
+    
+    with open(payload) as f:
+        payload = json.load(f)
+    if all([x in payload for x in inputs]):
+        click.echo(click.style(f"Querying host {host+'/predict'} with payload: \n{payload}",
+            bg="green", fg="white"))
+        result = requests.post(url=host, json=payload)
+        click.echo(click.style(f"result: {result.text}", bg="red", fg="white"))
+    else: 
+        click.echo(click.style(f"Incorrect or Empty Payload", bg="red", fg="white"))
 
 
 if __name__ == "__main__":
