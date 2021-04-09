@@ -37,4 +37,4 @@ The payload looks like
     }
     
 The output looks like
->"You have been identified as having very high risk of stroke: Score 0.9547"
+>"Probability of patient stroke is 0.9547"
