@@ -1,0 +1,38 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  stroke-application
+
+  Sample SAM Template for stroke-application
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Timeout: 20
+
+Resources:
+  StrokeFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      PackageType: Image
+      Events:
+        Stroke:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /predict
+            Method: post
+    Metadata:
+      Dockerfile: Dockerfile
+      DockerContext: ./stroke_app
+      DockerTag: python3.8-v1
+
+Outputs:
+  StrokeApi:
+    Description: "API Gateway endpoint URL for Prod stage for Stroke function"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/predict/"
+  StrokeFunction:
+    Description: "Stroke Lambda Function ARN"
+    Value: !GetAtt StrokeFunction.Arn
+  StrokeFunctionIamRole:
+    Description: "Implicit IAM Role created for Stroke function"
+    Value: !GetAtt StrokeFunctionRole.Arn
