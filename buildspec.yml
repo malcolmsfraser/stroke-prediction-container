@@ -8,11 +8,9 @@ phases:
       - pip install --upgrade pip
       - pip install -r requirements.txt
       - pip install sam --upgrade
-      - make lint
   build:
     commands:
-      - sam build
-      -	sam deploy --config-file samconfig.toml --no-confirm-changeset
+      - make deploy
   post_build:
     commands:
       - echo Build completed on `date`
