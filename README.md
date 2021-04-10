@@ -17,6 +17,7 @@
 * [`buildspec.yml`](https://github.com/malcolmsfraser/stroke-prediction-container/blob/master/buildspec.yml) : Configuration for deplotment contiuous delivery
 
 ## Test my project:
+I reccommend using an AWS Cloud9 environment, but its not required.
 * Optional: create and source a virtual environment
 ```
 python3 -m venv ~/.venv
