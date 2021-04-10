@@ -50,7 +50,6 @@ or
  cd stroke-prediction-container
  python utilscli.py payload-predict [OR] python utils.py predict 
  ```
-*  
 #### Deploy the model with AWS Lambda yourself
 * create and ecr registry for the docker image `make ecr`
 * deploy containerized application to Lambda `make deploy`
