@@ -29,10 +29,10 @@ cd stroke-prediction-container
 make install
 ```
 #### Testing the deployed model
-*Note: If it returns "Endpoint request timed out" try again... Lambda just needs to warm up*
 * `python utilscli.py payload-predict --host https://n13eaek1z6.execute-api.us-east-1.amazonaws.com/Prod/predict` (*default payload: [payload.json](https://github.com/malcolmsfraser/stroke-prediction-container/blob/master/payload.json))*  
 or  
-* `python utilscli.py predict --host https://n13eaek1z6.execute-api.us-east-1.amazonaws.com/Prod/predict`  
+* `python utilscli.py predict --host https://n13eaek1z6.execute-api.us-east-1.amazonaws.com/Prod/predict`
+*Note: If it returns "Endpoint request timed out" try again... Lambda just needs to warm up*  
 #### Build and test locally
 * Run the Flask application with `python app.py`  
 * In a separate terminal, enter the same directory and query the local host: `python utils.py payload-predict` or `python utils.py predict` *(queries the localhost by default)*
