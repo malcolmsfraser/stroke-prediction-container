@@ -16,10 +16,17 @@
 * [`aws-sambda-sam/stroke-application`](https://github.com/malcolmsfraser/stroke-prediction-container/blob/master/aws-sambda-sam/stroke-application) : Deployed application in an AWS Lambda function with using AWS SAM
 * [`buildspec.yml`](https://github.com/malcolmsfraser/stroke-prediction-container/blob/master/buildspec.yml) : Configuration for deplotment contiuous delivery
 
-## Test my ML Project:
+## Test my project:
+* Optional: create and source a virtual environment
+```
+python3 -m venv ~/.venv
+source ~/.venv/bin/activate
+```
+* Clone directory and install requirements
 ```
 git clone https://github.com/malcolmsfraser/stroke-prediction-container.git
 cd stroke-prediction-container
+make install
 ```
 #### Testing the deployed model
 * `python utils.py payload-predict --host https://n13eaek1z6.execute-api.us-east-1.amazonaws.com/Prod/predict`(*default payload: [payload.json](https://github.com/malcolmsfraser/stroke-prediction-container/blob/master/payload.json))*  
@@ -27,12 +34,14 @@ or
 * `python utils.py predict --host https://n13eaek1z6.execute-api.us-east-1.amazonaws.com/Prod/predict`  
 #### Build and test locally
 * Run the Flask application with `python app.py`  
-* In a separate terminal, enter the same directory and query the local host: `python utils.py payload-predict` or `python utils.py predict` *(queries the localhost by default)*  
+* In a separate terminal, enter the same directory and query the local host: `python utils.py payload-predict` or `python utils.py predict` *(queries the localhost by default)*
 #### Test the containerized application
 * Build image locally `docker build --tag stroke-predict` or pull from dockerhub `docker pull malcolmsfraser/stroke-predict`  
 * Run the container `docker run -p 8080:8080 stroke-predict` or `docker run -p 8080:8080 malcolmsfraser/stroke-predict`  
 * In a separate terminal, enter the same directory and query the local host: `python utils.py payload-predict` or `python utils.py predict` 
-
+#### Deploy the model yourself
+* create and ecr registry for the docker image `make ecr`
+* deploy containerized application to Lambda `make deploy`
 
 
 
