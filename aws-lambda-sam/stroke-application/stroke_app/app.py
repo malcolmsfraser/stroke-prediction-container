@@ -1,11 +1,8 @@
 import json
 import mlib
-import predict
-
-
 
 def lambda_handler(event, context):
-    
+    _ = context
     print(f"RAW LAMBDA EVENT BODY: {event}")
     if "body" in event:
         event = json.loads(event["body"])

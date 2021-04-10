@@ -8,7 +8,7 @@ def create_payload():
         try:
             age = float(input("Input age (int): "))
             break
-        except AssertionError as e:
+        except AssertionError:
             print("Incorrect Value")
     
     while True:
@@ -16,7 +16,7 @@ def create_payload():
             hypertension = float(input("Hypertension? (0/1): "))
             assert(hypertension in [0,1])
             break
-        except AssertionError as e:
+        except AssertionError:
             print("Incorrect Value")
     
     while True:
@@ -24,21 +24,21 @@ def create_payload():
             heart_disease = float(input("Heart Disease? (0/1)"))
             assert (heart_disease) in [0,1]
             break
-        except AssertionError as e:
+        except AssertionError:
             print("Incorrect Value")
       
     while True:
         try:
             avg_glucose_level = float(input('Input avg glucose lvl (float): '))
             break
-        except AssertionError as e:
+        except AssertionError:
             print("Incorrect Value")
         
     while True:
         try:
             bmi = float(input('Input bmi (float): '))
             break
-        except AssertionError as e:
+        except AssertionError:
             print("Incorrect Value")
     
     male = 0
@@ -55,7 +55,7 @@ def create_payload():
             elif gender == 2:
                 other = 1
             break
-        except AssertionError as e:
+        except AssertionError:
             print("Incorrect value")
             
     while True:
@@ -67,7 +67,7 @@ def create_payload():
             elif ever_married_yes == 0:
                 ever_married_no = 1
             break
-        except AssertionError as e:
+        except AssertionError:
             print("Incorrect value")
         
         
@@ -91,7 +91,7 @@ def create_payload():
             elif work_type == 5:
                 at_home_parent = 5
             break
-        except AssertionError as e:
+        except AssertionError:
             print("Incorrect value")
     
     rural = 0
@@ -105,7 +105,7 @@ def create_payload():
             elif residence_type ==1:
                 urban = 1
             break
-        except AssertionError as e:
+        except AssertionError:
             print("Incorrect value")
     
     smoke_unknown = 0
@@ -125,7 +125,7 @@ def create_payload():
             elif smoking_status == 3:
                 smoker = 1
             break
-        except AssertionError as e:
+        except AssertionError:
             print("Incorrect value")
             
     payload = {
@@ -155,6 +155,6 @@ def create_payload():
     return payload
 
 if __name__ == "__main__":
-    payload = create_payload()
-    result = predict(payload)
+    load = create_payload()
+    result = predict(load)
     print(result)

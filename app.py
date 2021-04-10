@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request
 from flask.logging import create_logger
 import logging
 
@@ -11,7 +11,7 @@ LOG.setLevel(logging.INFO)
 
 @app.route("/")
 def home():
-    html = f"<h3>Stroke Prediction Home</h3>"
+    html = "<h3>Stroke Prediction Home</h3>"
     return html.format(format)
 
 # TO DO:  Log out the prediction value

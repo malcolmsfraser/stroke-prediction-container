@@ -1,9 +1,7 @@
 """MLOps Library"""
 
-import numpy as np
 import pandas as pd
 import joblib
-from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from imblearn.over_sampling import SMOTE
 import xgboost as xgb
@@ -62,6 +60,6 @@ def predict(payload):
         "payload" : payload,
         "prediction" : prediction,
     }
-    logging.debug(f"Prediction: {prediction}")
+    logging.debug(f"Prediction: {predict_log_data}")
     return prediction
     

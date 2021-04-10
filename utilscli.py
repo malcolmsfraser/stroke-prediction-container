@@ -63,7 +63,7 @@ def mk_payloadrequest(payload, host):
         result = requests.post(url=host, json=payload)
         click.echo(click.style(f"Predicted probability of patient stroke: {result.text}", bg="red", fg="white"))
     else: 
-        click.echo(click.style(f"Incorrect or Empty Payload", bg="red", fg="white"))
+        click.echo(click.style("Incorrect or Empty Payload", bg="red", fg="white"))
 
 
 if __name__ == "__main__":
