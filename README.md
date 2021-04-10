@@ -22,7 +22,7 @@ git clone https://github.com/malcolmsfraser/stroke-prediction-container.git
 cd stroke-prediction-container
 ```
 **Testing the deployed model**  
-`python utils.py payload-predict --host https://n13eaek1z6.execute-api.us-east-1.amazonaws.com/Prod/predict`(*sends default payload, [payload.json](https://github.com/malcolmsfraser/stroke-prediction-container/blob/master/payload.json)*  
+`python utils.py payload-predict --host https://n13eaek1z6.execute-api.us-east-1.amazonaws.com/Prod/predict`(*default payload: [payload.json](https://github.com/malcolmsfraser/stroke-prediction-container/blob/master/payload.json)*  
 or  
 `python utils.py predict --host https://n13eaek1z6.execute-api.us-east-1.amazonaws.com/Prod/predict`  
 **Build and test locally**  
