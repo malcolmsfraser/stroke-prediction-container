@@ -28,7 +28,7 @@ def data():
     
 def retrain(tsize=.2, model_name="stroke_prediction.joblib"):
     """Retrains the model
-    See this notebook: Baseball_Predictions_Export_Model.ipynb
+    See this notebook: Stroke_Prediction_Model_Export.ipynb
     """
     dataset = data()
     bmi_median = dataset["bmi"].median()
@@ -54,10 +54,10 @@ def retrain(tsize=.2, model_name="stroke_prediction.joblib"):
     return accuracy, model_name
     
 def predict(payload):
-    
+    """Use model to predict a json payload"""
     load = pd.DataFrame(data=payload)
     clf =  load_model()
-    prediction = clf.predict_proba(load)
+    prediction = clf.predict_proba(load)[0][0]
     predict_log_data = {
         "payload" : payload,
         "prediction" : prediction,

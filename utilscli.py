@@ -14,8 +14,8 @@ def cli():
 @cli.command("retrain")
 @click.option("--tsize", default=0.1, help="Test Size")
 def retrain(tsize):
-    """Retrain Model
-    You may want to extend this with more options, such as setting model_name
+    """
+    Retrain Model
     """
 
     click.echo(click.style("Retraining Model", bg="green", fg="white"))
@@ -29,19 +29,24 @@ def retrain(tsize):
 @cli.command("predict")
 @click.option("--host", default="http://localhost:8080/", help="Host to query")
 def mkrequest(host):
-    """Sends prediction to ML Endpoint"""
+    """
+    Prompt user to patient info to create payload
+    Sends payload to ML Endpoint for prediction
+    """
     
     payload = create_payload()
     click.echo(click.style(f"Querying host {host+'/predict'} with payload: \n{payload}",
         bg="green", fg="white"))
     result = requests.post(url=host, json=payload)
-    click.echo(click.style(f"result: {result.text}", bg="red", fg="white"))
+    click.echo(click.style(f"Predicted probability of patient stroke: {result.text}", bg="red", fg="white"))
 
 @cli.command("payload-predict")
 @click.option("--payload", default="payload.json", help="json payload")
 @click.option("--host", default="http://localhost:8080/", help="Host to query")
 def mk_payloadrequest(payload, host):
-    """Sends prediction to ML Endpoint"""
+    """
+    Sends preformatted json payload to ML Endpoint for prediction
+    """
     
     inputs = ['age','hypertension','heart_disease','avg_glucose_level', 'bmi',
     'gender_Female', 'gender_Male', 'gender_Other',
@@ -56,7 +61,7 @@ def mk_payloadrequest(payload, host):
         click.echo(click.style(f"Querying host {host+'/predict'} with payload: \n{payload}",
             bg="green", fg="white"))
         result = requests.post(url=host, json=payload)
-        click.echo(click.style(f"result: {result.text}", bg="red", fg="white"))
+        click.echo(click.style(f"Predicted probability of patient stroke: {result.text}", bg="red", fg="white"))
     else: 
         click.echo(click.style(f"Incorrect or Empty Payload", bg="red", fg="white"))
 

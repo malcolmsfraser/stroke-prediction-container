@@ -1,6 +1,9 @@
 from mlib import predict
 
 def create_payload():
+    """
+    Prompts user input of patient information
+    """
     while True:
         try:
             age = float(input("Input age (int): "))

@@ -10,7 +10,6 @@ def lambda_handler(event, context):
     if "body" in event:
         event = json.loads(event["body"])
         print("API Gateway Request event")
-        return event
     else:
         print("Function Request")
 
@@ -23,13 +22,14 @@ def lambda_handler(event, context):
     'smoking_status_Unknown','smoking_status_formerly smoked','smoking_status_never smoked','smoking_status_smokes']
     
     if all([x in event for x in inputs]):
-        payload = event["payload"]
-        print(payload)
+        print(f"Valid Payload.\nPredicting response for payload: \n{event}")
+        payload = event
         prediction = mlib.predict(payload)
         print(f"Prediction: {prediction}")
         return {
             "statusCode" : 200,
-            "body" : json.dumps(prediction),
+            "body" : json.dumps(prediction.item()),
+            "headers":{ 'Access-Control-Allow-Origin' : '*' }
         }
     else: 
         payload = {"Message": "Incorrect or Empty Payload"}
