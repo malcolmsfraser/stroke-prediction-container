@@ -43,7 +43,7 @@ or
  ```
  source ~/.venv/bin/activate
  cd stroke-prediction-container
- `python utilscli.py payload-predict` or `python utils.py predict` 
+ ```python utilscli.py payload-predict``` or ```python utils.py predict` 
  ```
 *  
 #### Deploy the model with AWS Lambda yourself
