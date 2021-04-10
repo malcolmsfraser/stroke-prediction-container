@@ -1,7 +1,7 @@
-# stroke-prediction-container
-
 ![Build Status](https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiYTBNa0wwUFpGNnluZ1RGejBxc1lGK0NFWkhsNFlXd0VPVlQvcnhpOVd5dkhsNDg5MmFVcHpMWWwzVWczVU9WTEhOc3R1R2Mzc1RqYmFHQkQ3YlFkbVpvPSIsIml2UGFyYW1ldGVyU3BlYyI6Ik1ENTVIQmlHNlg4RWdWNFciLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=master)
 [![CI](https://github.com/malcolmsfraser/stroke-prediction-container/actions/workflows/blank.yml/badge.svg?branch=master)](https://github.com/malcolmsfraser/stroke-prediction-container/actions/workflows/blank.yml)
+
+# stroke-prediction-container
 
 
 ## In this repo:
