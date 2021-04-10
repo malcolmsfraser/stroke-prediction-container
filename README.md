@@ -6,7 +6,7 @@
 * [`predict.py`](https://github.com/malcolmsfraser/stroke-prediction-container/blob/master/predict.py) (Prediction Assistance) : Formats a JSON payload for prediction
 * [`payload.json`](https://github.com/malcolmsfraser/stroke-prediction-container/blob/master/payload.json) : Test payload
 * [`utilscli.py`](https://github.com/malcolmsfraser/stroke-prediction-container/blob/master/utilscli.py) (ML Tools) : Commandline tool for retaining the model and for querying ML Endpoints (both with preformatted payload or with user inputted payload)
-* [`Stroke_Prediction_Model_Export.ipynb`](https://github.com/malcolmsfraser/stroke-prediction-container/blob/master/Stroke_Prediction_Model_Export.ipynb : Model training, evaluation, and export
+* [`Stroke_Prediction_Model_Export.ipynb`](https://github.com/malcolmsfraser/stroke-prediction-container/blob/master/Stroke_Prediction_Model_Export.ipynb) : Model training, evaluation, and export
 * [`app.py`](https://github.com/malcolmsfraser/stroke-prediction-container/blob/master/app.py) : Stroke prediction Flask application with a /predict route
 * [`resize.sh`](https://github.com/malcolmsfraser/stroke-prediction-container/blob/master/resize.sh) : Bash script for resizing AWS EC2 instance
 * [`requirements.txt`](https://github.com/malcolmsfraser/stroke-prediction-container/blob/master/resize.sh) : Dependencies for the flask app, ML tools, and local container
