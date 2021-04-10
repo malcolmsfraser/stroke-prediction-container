@@ -1,5 +1,7 @@
 # stroke-prediction-container
 
+https://codebuild.us-east-1.amazonaws.com/badges?uuid=eyJlbmNyeXB0ZWREYXRhIjoiYTBNa0wwUFpGNnluZ1RGejBxc1lGK0NFWkhsNFlXd0VPVlQvcnhpOVd5dkhsNDg5MmFVcHpMWWwzVWczVU9WTEhOc3R1R2Mzc1RqYmFHQkQ3YlFkbVpvPSIsIml2UGFyYW1ldGVyU3BlYyI6Ik1ENTVIQmlHNlg4RWdWNFciLCJtYXRlcmlhbFNldFNlcmlhbCI6MX0%3D&branch=main
+
 
 ## In this repo:
 * [`mlib.py`](https://github.com/malcolmsfraser/stroke-prediction-container/blob/master/mlib.py) (Model Handling Library) : Functions for retraining the model and prediction
