@@ -11,7 +11,7 @@
 * resize.sh : Bash script for resizing AWS EC2 instance
 * requirements.txt : Dependencies for the flask app, ML tools, and local container
 * healthcare-dataset-stroke-data.csv : training data
-* Dockerfile : for building an image locally (can also pull image with ```{bash} docker pull malcolmsfraser/stroke-predict```)
+* Dockerfile : for building an image locally (can also pull image with ```docker pull malcolmsfraser/stroke-predict```)
 * Makefile: 
 * aws-sambda-sam/stroke-application : Deployed application in an AWS Lambda function with using AWS SAM
 * buildspec.yml : Configuration for deplotment contiuous delivery
