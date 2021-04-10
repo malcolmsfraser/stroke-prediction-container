@@ -1,7 +1,8 @@
 install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt &&\
-			pip install --upgrade aws-sam-cli
+			pip install --upgrade aws-sam-cli &&\
+				pip install --upgrade ecr-cli
 
 lint:
 	pylint --disable=R,C,W1203,E1101 mlib predict utilscli app; 
