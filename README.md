@@ -1,5 +1,26 @@
 # stroke-prediction-container
 
+
+## In this repo:
+* mlib.py (Model Handling Library) : Functions for retraining the model and prediction
+* predict.py (Prediction Assistance) : Formats a JSON payload for prediction
+* payload.json : Test payload
+* utilscli.py (ML Tools) : Commandline tool for retaining the model and for querying ML Endpoints (both with preformatted payload or with user inputted payload)
+* Stroke_Prediction_Model_Export : Model training, evaluation, and export
+* app.py : Stroke prediction Flask application with a /predict route
+* resize.sh : Bash script for resizing AWS EC2 instance
+* requirements.txt : Dependencies for the flask app, ML tools, and local container
+* healthcare-dataset-stroke-data.csv : training data
+* Dockerfile : for building an image locally (can also pull image with ```{bash} docker pull malcolmsfraser/stroke-predict```)
+* Makefile: 
+* aws-sambda-sam/stroke-application : Deployed application in an AWS Lambda function with using AWS SAM
+* buildspec.yml : Configuration for deplotment contiuous delivery
+*  
+
+
+
+
+
 [![alt text](https://github.com/malcolmsfraser/stroke-prediction-container/blob/master/thumbnail.jpg)](https://youtu.be/zslng8DUUkw)  
 
 Source code for a Docker container that has a flask based web-app inside stroke prediction.
