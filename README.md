@@ -39,7 +39,7 @@ or
 * Build image locally `docker build --tag stroke-predict` or pull from dockerhub `docker pull malcolmsfraser/stroke-predict`  
 * Run the container `docker run -p 8080:8080 stroke-predict` or `docker run -p 8080:8080 malcolmsfraser/stroke-predict`  
 * In a separate terminal, enter the same directory and query the local host: `python utils.py payload-predict` or `python utils.py predict` 
-#### Deploy the model yourself
+#### Deploy the model with AWS Lambda yourself
 * create and ecr registry for the docker image `make ecr`
 * deploy containerized application to Lambda `make deploy`
 
