@@ -25,8 +25,7 @@ def lambda_handler(event, context):
         print(f"Prediction: {prediction}")
         return {
             "statusCode" : 200,
-            "body" : json.dumps(prediction.item()),
-            "headers":{ 'Access-Control-Allow-Origin' : '*' }
+            "body" : json.dumps(prediction.item())
         }
     else: 
         payload = {"Message": "Incorrect or Empty Payload"}
