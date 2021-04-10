@@ -27,7 +27,7 @@ def retrain(tsize):
 
 
 @cli.command("predict")
-@click.option("--host", default="http://localhost:8080/", help="Host to query")
+@click.option("--host", default="http://localhost:8080/predict", help="Host to query")
 def mkrequest(host):
     """
     Prompt user to patient info to create payload
@@ -42,7 +42,7 @@ def mkrequest(host):
 
 @cli.command("payload-predict")
 @click.option("--payload", default="payload.json", help="json payload")
-@click.option("--host", default="http://localhost:8080/", help="Host to query")
+@click.option("--host", default="http://localhost:8080/predict", help="Host to query")
 def mk_payloadrequest(payload, host):
     """
     Sends preformatted json payload to ML Endpoint for prediction
