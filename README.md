@@ -21,18 +21,18 @@
 git clone https://github.com/malcolmsfraser/stroke-prediction-container.git
 cd stroke-prediction-container
 ```
-**Testing the deployed model**
-`python utils.py payload-predict --host https://n13eaek1z6.execute-api.us-east-1.amazonaws.com/Prod/predict`
-*sends default payload payload.json*
-or
-`python utils.py predict --host https://n13eaek1z6.execute-api.us-east-1.amazonaws.com/Prod/predict`
-**Build and test locally**
-Run the Flask application with `python app.py`
-In a separate terminal, enter the same directory and query the local host: `python utils.py payload-predict` or `python utils.py predict` 
-*queries the localhost by default*
-**Test the containerized application**
-Build image locally `docker build --tag stroke-predict` or pull from dockerhub `docker pull malcolmsfraser/stroke-predict`
-Run the container `docker run -p 8080:8080 stroke-predict` or `docker run -p 8080:8080 malcolmsfraser/stroke-predict`
+**Testing the deployed model**  
+`python utils.py payload-predict --host https://n13eaek1z6.execute-api.us-east-1.amazonaws.com/Prod/predict`  
+*sends default payload payload.json*  
+or  
+`python utils.py predict --host https://n13eaek1z6.execute-api.us-east-1.amazonaws.com/Prod/predict`  
+**Build and test locally**  
+Run the Flask application with `python app.py`  
+In a separate terminal, enter the same directory and query the local host: `python utils.py payload-predict` or `python utils.py predict`   
+*queries the localhost by default*  
+**Test the containerized application**  
+Build image locally `docker build --tag stroke-predict` or pull from dockerhub `docker pull malcolmsfraser/stroke-predict`  
+Run the container `docker run -p 8080:8080 stroke-predict` or `docker run -p 8080:8080 malcolmsfraser/stroke-predict`  
 In a separate terminal, enter the same directory and query the local host: `python utils.py payload-predict` or `python utils.py predict` 
 
 
