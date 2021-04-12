@@ -2,7 +2,7 @@
 [![Install and Lint](https://github.com/malcolmsfraser/stroke-prediction-container/actions/workflows/blank.yml/badge.svg)](https://github.com/malcolmsfraser/stroke-prediction-container/actions/workflows/blank.yml)
 
 # stroke-prediction-container
-
+Serverless ML application hosted on AWS with Lambda + MLOps Toolkit Integration
 
 ## In this repo:
 * [`mlib.py`](https://github.com/malcolmsfraser/stroke-prediction-container/blob/master/mlib.py) (Model Handling Library) : Functions for retraining the model and prediction
