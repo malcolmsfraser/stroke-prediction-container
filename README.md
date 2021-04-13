@@ -10,7 +10,7 @@
 
 ## Demo Videos
 [![alt text](https://github.com/malcolmsfraser/stroke-prediction-container/blob/master/Images/ServerlessMLpt1Thumbnail.jpg)](https://youtu.be/INH2K6nPBQk) [![alt text](https://github.com/malcolmsfraser/stroke-prediction-container/blob/master/Images/ServerlessMLpt2Thumbnail.jpg)](https://youtu.be/Spbifsgo1UM) [![alt text](https://github.com/malcolmsfraser/stroke-prediction-container/blob/master/Images/ServerlessMLpt3Thumbnail.jpg)](https://youtu.be/sfxoKAXkXEM)  
-Part 1: Querying the Lambda Endpoint | Part 2: Running containerized application locally | Part 3: Some Helpful MLOps Tools  
+Part 1: Querying the Lambda Endpoint   |   Part 2: Running containerized application locally   |   Part 3: Some Helpful MLOps Tools  
 
 ## In this repo:
 * [`mlib.py`](https://github.com/malcolmsfraser/stroke-prediction-container/blob/master/mlib.py) (Model Handling Library) : Functions for retraining the model and prediction
