@@ -39,7 +39,7 @@ make install
 or  
 * `python utilscli.py predict --host https://n13eaek1z6.execute-api.us-east-1.amazonaws.com/Prod/predict`  
 *Note: If it returns "Endpoint request timed out" try again... Lambda just needs to warm up*  
-#### B. Build and test locally
+#### B. Test the application locally
 * Run the Flask application with `python app.py`  
 * In a separate terminal, enter the same directory and query the local host *(utilscli.py queries the localhost by default)*:
  ```
@@ -47,7 +47,7 @@ or
  cd stroke-prediction-container
  python utilscli.py payload-predict [OR] python utils.py predict 
  ```
-#### C. Test the containerized application
+#### C. Build and test the containerized application locally
 * Build image locally `docker build --tag stroke-predict` or pull from dockerhub `docker pull malcolmsfraser/stroke-predict`  
 * Run the container `docker run -p 8080:8080 stroke-predict` or `docker run -p 8080:8080 malcolmsfraser/stroke-predict`  
 * In a separate terminal, enter the same directory and query the localhost
