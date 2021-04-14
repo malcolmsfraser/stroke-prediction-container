@@ -39,7 +39,12 @@ source ~/.venv/bin/activate
 git clone https://github.com/malcolmsfraser/stroke-prediction-container.git
 cd stroke-prediction-container
 make install
+```  
+if you are not in an environment that uses Makefiles, run
 ```
+pip install --upgrade pip &&\
+pip install -r requirements.txt &&\
+```    
 #### A. Testing the deployed model
 * `python utilscli.py payload-predict --host https://n13eaek1z6.execute-api.us-east-1.amazonaws.com/Prod/predict` (*default payload: [payload.json](https://github.com/malcolmsfraser/stroke-prediction-container/blob/master/payload.json))*  
 or  
