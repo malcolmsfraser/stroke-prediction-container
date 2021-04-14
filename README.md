@@ -38,9 +38,11 @@ source ~/.venv/bin/activate
 ```
 git clone https://github.com/malcolmsfraser/stroke-prediction-container.git
 cd stroke-prediction-container
+```
+```
 make install
 ```  
-if you are not in an environment that uses Makefiles, run
+Or, if you are not in an environment that uses Makefiles, run
 ```
 pip install --upgrade pip &&\
 pip install -r requirements.txt &&\
