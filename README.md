@@ -57,6 +57,8 @@ or
 * In a separate terminal, enter the same directory and query the local host *(utilscli.py queries the localhost by default)*:
  ```
  source ~/.venv/bin/activate
+ ```
+ ```
  cd stroke-prediction-container
  python utilscli.py payload-predict [OR] python utils.py predict 
  ```
