@@ -74,6 +74,6 @@ or
  python utilscli.py payload-predict [OR] python utils.py predict 
  ```
 #### D. Deploy the model with AWS Lambda yourself
-These instructions are suited for an AWS Cloud9 environment or the AWS CloudShell.
+These instructions are suited for an AWS Cloud9 environment, the AWS CloudShell, or any environment where you have configured a connection to AWS.
 * create and ecr registry for the docker image `make ecr`
 * deploy containerized application to Lambda `make deploy`
