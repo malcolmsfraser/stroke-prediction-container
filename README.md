@@ -2,11 +2,11 @@
 [![Install and Lint](https://github.com/malcolmsfraser/stroke-prediction-container/actions/workflows/blank.yml/badge.svg)](https://github.com/malcolmsfraser/stroke-prediction-container/actions/workflows/blank.yml)
 
 # stroke-prediction-container
-*Serverless ML application hosted on AWS with Lambda + MLOps Toolkit Integration*  
+* **Serverless ML application hosted on AWS with Lambda + MLOps Toolkit Integration** 
   
-*Continuous delivery is set up with AWS CodeBuild listening to any changes to the aws-lambda-sam sub-directory and deploys any changes to AWS Lambda*  
+* **Continuous delivery is set up with AWS CodeBuild listening to any changes to the aws-lambda-sam sub-directory and deploys any changes to AWS Lambda**
   
-*Continuous integration is set up with Github Actions listening to any changes in the main directory and then lints all the code in this repo*
+* **Continuous integration is set up with Github Actions listening to any changes in the main directory and then lints all the code in this repo**
 
 ## Demo Videos
 [![alt text](https://github.com/malcolmsfraser/stroke-prediction-container/blob/master/Images/ServerlessMLpt1Thumbnail.jpg)](https://youtu.be/INH2K6nPBQk) [![alt text](https://github.com/malcolmsfraser/stroke-prediction-container/blob/master/Images/ServerlessMLpt2Thumbnail.jpg)](https://youtu.be/Spbifsgo1UM) [![alt text](https://github.com/malcolmsfraser/stroke-prediction-container/blob/master/Images/ServerlessMLpt3Thumbnail.jpg)](https://youtu.be/sfxoKAXkXEM)  
