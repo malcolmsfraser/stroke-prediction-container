@@ -68,6 +68,8 @@ or
 * In a separate terminal, enter the same directory and query the localhost
  ```
  source ~/.venv/bin/activate
+ ```
+ ```
  cd stroke-prediction-container
  python utilscli.py payload-predict [OR] python utils.py predict 
  ```
